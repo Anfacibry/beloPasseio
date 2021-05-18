@@ -1,4 +1,5 @@
 import 'package:belopasseio/constantes.dart';
+import 'package:belopasseio/models/caixaTexto.dart';
 import 'package:flutter/material.dart';
 
 main() => runApp(MyApp());
@@ -35,41 +36,19 @@ class Login extends StatelessWidget {
                 fontSize: 36,
               ),
             ),
-            Container(
-              padding: EdgeInsets.only(left: 12, top: 20, bottom: 20),
-              width: 305,
-              height: 68,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: kCorDaCaixa,
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: "Nome",
-                  labelStyle: TextStyle(
-                    fontSize: 24,
-                  ),
-                  enabledBorder: InputBorder.none,
-                ),
-              ),
+            CaixaTexto(
+              largura: 305,
+              altura: 68,
+              corCaixa: kCorDaCaixa,
+              nome: "Nome",
+              tamanhoFonte: 24,
             ),
-            Container(
-              padding: EdgeInsets.only(left: 12, top: 20, bottom: 20),
-              width: 305,
-              height: 68,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(20),
-                color: kCorDaCaixa,
-              ),
-              child: TextField(
-                decoration: InputDecoration(
-                  labelText: "Senha",
-                  labelStyle: TextStyle(
-                    fontSize: 24,
-                  ),
-                  enabledBorder: InputBorder.none,
-                ),
-              ),
+            CaixaTexto(
+              largura: 305,
+              altura: 68,
+              corCaixa: kCorDaCaixa,
+              nome: "Senha",
+              tamanhoFonte: 24,
             ),
             Container(
               width: 283,
