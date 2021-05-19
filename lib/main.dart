@@ -22,70 +22,89 @@ class Login extends StatelessWidget {
     return Scaffold(
       body: Container(
         padding: EdgeInsets.only(top: 30, bottom: 30),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            Image.asset(
-              SLOGAN,
-            ),
-            Text(
-              "Dogs & Cats",
-              style: TextStyle(
-                color: kCorNomeDaTelaIncial,
-                fontWeight: FontWeight.bold,
-                fontSize: 36,
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              Image.asset(
+                SLOGAN,
               ),
-            ),
-            //Caixa de Texto de login
-            CaixaTexto(
-              largura: 305,
-              altura: 68,
-              corCaixa: kCorDaCaixa,
-              nome: "Nome",
-              tamanhoFonte: 24,
-            ),
-            //Caixa de Texto de senha
-            CaixaTexto(
-              largura: 305,
-              altura: 68,
-              corCaixa: kCorDaCaixa,
-              nome: "Senha",
-              tamanhoFonte: 24,
-            ),
-            //Container com apresentação do botão para entrar com login e senha
-            Container(
-              width: 283,
-              height: 59,
-              child: ElevatedButton(
-                onPressed: () {},
-                child: Text(
-                  "ENTRAR",
-                  style: TextStyle(
-                    color: kCorNomeDaTelaIncial,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30,
-                  ),
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Dogs & Cats",
+                style: TextStyle(
+                  color: kCorNomeDaTelaIncial,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 36,
                 ),
-                style: ButtonStyle(
-                  shape: MaterialStateProperty.all(
-                    RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30),
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              //Caixa de Texto de login
+              CaixaTexto(
+                largura: 305,
+                altura: 60,
+                corCaixa: kCorDaCaixa,
+                nome: "Nome",
+                tamanhoFonte: 24,
+                aparecerOuNao: false,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              //Caixa de Texto de senha
+              CaixaTexto(
+                largura: 305,
+                altura: 60,
+                corCaixa: kCorDaCaixa,
+                nome: "Senha",
+                tamanhoFonte: 24,
+                aparecerOuNao: true,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              //Container com apresentação do botão para entrar com login e senha
+              Container(
+                width: 283,
+                height: 59,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text(
+                    "ENTRAR",
+                    style: TextStyle(
+                      color: kCorNomeDaTelaIncial,
+                      fontWeight: FontWeight.bold,
+                      fontSize: 30,
                     ),
                   ),
-                  backgroundColor: MaterialStateProperty.all(kCorBotao),
+                  style: ButtonStyle(
+                    shape: MaterialStateProperty.all(
+                      RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(30),
+                      ),
+                    ),
+                    backgroundColor: MaterialStateProperty.all(kCorBotao),
+                  ),
                 ),
               ),
-            ),
-            //Botão de redefinir a senha
-            Text(
-              "Esqueci a senha",
-              style: TextStyle(
-                color: kCorNomeDeMenosDestaque,
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
+              SizedBox(
+                height: 5,
               ),
-            ),
-          ],
+              //Botão de redefinir a senha
+              Text(
+                "Esqueci a senha",
+                style: TextStyle(
+                  color: kCorNomeDeMenosDestaque,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18,
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
