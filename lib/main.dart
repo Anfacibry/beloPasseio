@@ -36,6 +36,7 @@ class Login extends StatelessWidget {
                 fontSize: 36,
               ),
             ),
+            //Caixa de Texto de login
             CaixaTexto(
               largura: 305,
               altura: 68,
@@ -43,6 +44,7 @@ class Login extends StatelessWidget {
               nome: "Nome",
               tamanhoFonte: 24,
             ),
+            //Caixa de Texto de senha
             CaixaTexto(
               largura: 305,
               altura: 68,
@@ -50,6 +52,7 @@ class Login extends StatelessWidget {
               nome: "Senha",
               tamanhoFonte: 24,
             ),
+            //Container com apresentação do botão para entrar com login e senha
             Container(
               width: 283,
               height: 59,
@@ -73,6 +76,7 @@ class Login extends StatelessWidget {
                 ),
               ),
             ),
+            //Botão de redefinir a senha
             Text(
               "Esqueci a senha",
               style: TextStyle(
