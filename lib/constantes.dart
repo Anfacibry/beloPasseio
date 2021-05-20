@@ -34,11 +34,11 @@ const String VETORTRANSPARENTE = "assets/icons/vetor2.png";
 const String VOLTAR = "assets/icons/voltar.png";
 
 double alturaPega(BuildContext context) {
-  double altura = MediaQuery.of(context).size.height;
+  final double altura = MediaQuery.of(context).size.height;
   return altura;
 }
 
 double larguraPega(BuildContext context) {
-  double largura = MediaQuery.of(context).size.width;
+  final double largura = MediaQuery.of(context).size.width;
   return largura;
 }
