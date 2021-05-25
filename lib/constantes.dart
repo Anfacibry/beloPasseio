@@ -11,7 +11,7 @@ Color kCorAzulForte = const Color(0xFF383281);
 
 //imagens
 const String SLOGAN = "assets/images/sloga.png";
-const String GATO1 = "assets/images/cat1.png";
+const String CAT1 = "assets/images/cat1.png";
 const String DOG1 = "assets/images/dog1.png";
 const String DOG2 = "assets/images/dog2.png";
 const String FUNDO = "assets/images/fundo.jpg";
@@ -42,3 +42,21 @@ double larguraPega(BuildContext context) {
   final double largura = MediaQuery.of(context).size.width;
   return largura;
 }
+
+const List<Map<String, String>> ANIMAIS = [
+  {
+    "status": "2 com frio",
+    "nome": "Bob",
+    "imagem": DOG1,
+  },
+  {
+    "status": "1 com sede",
+    "nome": "Chocolate",
+    "imagem": DOG2,
+  },
+  {
+    "status": "3 com fome",
+    "nome": "Esponja",
+    "imagem": CAT1,
+  },
+];
