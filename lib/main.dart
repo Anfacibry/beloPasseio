@@ -208,13 +208,15 @@ class _HomePrincipalState extends State<HomePrincipal> {
                             ),
                           ),
                           style: ButtonStyle(
-                              backgroundColor: MaterialStateProperty.all(
-                                kCorBotao,
-                              ),
-                              shape: MaterialStateProperty.all(
-                                  RoundedRectangleBorder(
+                            backgroundColor: MaterialStateProperty.all(
+                              kCorBotao,
+                            ),
+                            shape: MaterialStateProperty.all(
+                              RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(20),
-                              ))),
+                              ),
+                            ),
+                          ),
                         )
                       ],
                     ),
