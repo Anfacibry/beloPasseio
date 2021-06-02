@@ -73,6 +73,13 @@ flutter:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
+  fonts:
+    - family: SignikaNegative
+      fonts:
+        - asset: assets/fonts/SignikaNegative-Bold.ttf
+        - asset: assets/fonts/SignikaNegative-Light.ttf
+        - asset: assets/fonts/SignikaNegative-Regular.ttf
+        - asset: assets/fonts/SignikaNegative-SemiBold.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
