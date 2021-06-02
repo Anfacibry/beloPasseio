@@ -1,3 +1,4 @@
+import 'package:belopasseio/contents/animais.dart';
 import 'package:belopasseio/models/dogsCats.dart';
 import 'package:flutter/material.dart';
 

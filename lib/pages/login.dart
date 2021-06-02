@@ -1,3 +1,4 @@
+import 'package:belopasseio/models/mediaQuery.dart';
 import 'package:belopasseio/models/caixaTexto.dart';
 import 'package:flutter/material.dart';
 import 'package:belopasseio/constantes.dart';
@@ -5,8 +6,8 @@ import 'package:belopasseio/constantes.dart';
 class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double altura = alturaPega(context);
-    double largura = larguraPega(context);
+    double altura = AlturaLargura().alturaPega(context);
+    double largura = AlturaLargura().larguraPega(context);
     return Scaffold(
       body: Center(
         child: Container(
