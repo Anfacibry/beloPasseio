@@ -1,6 +1,7 @@
 import 'package:belopasseio/constantes.dart';
-import 'package:belopasseio/models/modelosTextos.dart';
-import 'package:belopasseio/models/row.dart';
+import 'package:belopasseio/models/meninoSofa.dart';
+import 'package:belopasseio/models/rolagemListaAnimais.dart';
+import 'package:belopasseio/models/rows.dart';
 //import 'package:belopasseio/pages/login.dart';
 import 'package:flutter/material.dart';
 
@@ -14,9 +15,6 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         scaffoldBackgroundColor: kCorDeTelaDeFundo,
         fontFamily: FontSignikaNegativeFamily,
-        textTheme: TextTheme(
-          bodyText2: StyleTextos().estiloTextoPrincipal(),
-        ),
         accentColor: kCorBotao,
       ),
       home: HomePrincipal(),
@@ -37,23 +35,49 @@ class _HomePrincipalState extends State<HomePrincipal> {
     return Scaffold(
       body: Column(
         children: [
+          //Padding que faz a saudação de boas vindas do usuário com a imagem ao lado
           Padding(
             padding: const EdgeInsets.only(left: 20, top: 60, right: 20),
             child: Rows(
-              escolha: true,
+              centro: false,
+              imagemTexto: false,
               doisTextos: true,
-              texto1: "Bem vindo de volta",
-              texto2: "Fabricio Cintra",
+              textoPrincipal: "Bem vindo de volta",
+              tamanhoTextoPrincipal: 15,
+              corTextoPrincipal: kCorNomeDeMenosDestaque,
+              textoSecundario: "Fabricio Cintra",
+              tamanhoTextoSecundario: 25,
               imageProvider: imageProvider,
             ).rowTexto(),
           ),
+          RolageListaAnimais(),
           Padding(
-            padding: const EdgeInsets.only(left: 20, top: 60, right: 20),
+            padding: const EdgeInsets.all(20),
             child: Rows(
-              escolha: false,
+              centro: false,
+              imagemTexto: true,
               doisTextos: false,
-              texto1: "Bem vindo de volta",
-              imageProvider: imageProvider,
+              textoPrincipal: "Convite para um passeio",
+              tamanhoTextoPrincipal: 20,
+              textoSecundario2: "Criar",
+              tamanhoTextoSecundario2: 20,
+              corTextoSecundario2: kCorNomeDaTelaIncial,
+            ).rowTexto(),
+          ),
+          MeninoSofa(),
+          Padding(
+            padding: const EdgeInsets.all(20),
+            child: Rows(
+              centro: true,
+              imagemTexto: true,
+              doisTextos: true,
+              textoPrincipal: "Planos",
+              tamanhoTextoPrincipal: 25,
+              textoSecundario: "Hoje",
+              tamanhoTextoSecundario: 20,
+              corTextoSecundario: kCorNomeDeMenosDestaque,
+              textoSecundario2: "Add novo",
+              tamanhoTextoSecundario2: 20,
             ).rowTexto(),
           ),
         ],
