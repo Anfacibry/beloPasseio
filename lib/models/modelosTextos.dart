@@ -19,30 +19,40 @@ class ModeloTextos {
   }
 }
 
-class StyleTextos {
-  TextStyle estiloTextoPrincipal() {
+class EstiloTextos {
+  TextStyle estiloTextoPrincipal({
+    double? tamanhoFonte,
+    Color? corTextoPrincipal,
+  }) {
     return TextStyle(
       fontFamily: FontSignikaNegativeFamily,
-      fontSize: 20,
+      fontSize: tamanhoFonte,
       fontWeight: FontWeight.bold,
+      color: corTextoPrincipal,
     );
   }
 
-  TextStyle estiloTextoSecundario() {
+  TextStyle estiloTextoPrincipal2({
+    double? tamanhoFonte,
+    Color? corTextoSecundario2,
+  }) {
     return TextStyle(
       fontFamily: FontSignikaNegativeFamily,
-      fontSize: 20,
+      fontSize: tamanhoFonte,
       fontWeight: FontWeight.bold,
-      color: kCorNomeDeMenosDestaque,
+      color: corTextoSecundario2,
     );
   }
 
-  TextStyle estiloTextoSecundario2() {
+  TextStyle estiloTextoSecundario({
+    double? tamanhoFonte,
+    Color? corTextoSecundario,
+  }) {
     return TextStyle(
       fontFamily: FontSignikaNegativeFamily,
-      fontSize: 20,
+      fontSize: tamanhoFonte,
       fontWeight: FontWeight.bold,
-      color: Colors.white,
+      color: corTextoSecundario,
     );
   }
 }
