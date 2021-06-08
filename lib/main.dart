@@ -1,4 +1,5 @@
 import 'package:belopasseio/constantes.dart';
+import 'package:belopasseio/models/conteudoContainer.dart';
 import 'package:belopasseio/models/meninoSofa.dart';
 import 'package:belopasseio/models/rolagemListaAnimais.dart';
 import 'package:belopasseio/models/rows.dart';
@@ -80,49 +81,7 @@ class _HomePrincipalState extends State<HomePrincipal> {
               tamanhoTextoSecundario2: 20,
             ).rowTexto(),
           ),
-          Padding(
-              padding: const EdgeInsets.all(20),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Rows(
-                    centro: false,
-                    imagemTexto: true,
-                    doisTextos: false,
-                    textoPrincipal: "14:30h",
-                    tamanhoTextoPrincipal: 25,
-                  ).rowTexto(),
-                  Container(
-                    height: 60,
-                    width: 270,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(20),
-                      color: Colors.white,
-                    ),
-                    child: Row(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(2),
-                          child: Container(
-                            height: 55,
-                            width: 55,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(20),
-                              image: DecorationImage(
-                                image: AssetImage(
-                                  PERFIL2,
-                                ),
-                                fit: BoxFit.cover,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              )),
+          ConteudoContainer(),
         ],
       ),
     );
