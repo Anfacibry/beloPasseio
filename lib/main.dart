@@ -34,27 +34,28 @@ class _HomePrincipalState extends State<HomePrincipal> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          //Padding que faz a saudação de boas vindas do usuário com a imagem ao lado
-          Padding(
-            padding: const EdgeInsets.only(left: 20, top: 60, right: 20),
-            child: Rows(
-              centro: false,
-              imagemTexto: false,
-              doisTextos: true,
-              textoPrincipal: "Bem vindo de volta",
-              tamanhoTextoPrincipal: 15,
-              corTextoPrincipal: kCorNomeDeMenosDestaque,
-              textoSecundario: "Fabricio Cintra",
-              tamanhoTextoSecundario: 25,
-              imageProvider: imageProvider,
-            ).rowTexto(),
-          ),
-          RolageListaAnimais(),
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Rows(
+      body: Padding(
+        padding: const EdgeInsets.only(right: 10, left: 10),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+            //Padding que faz a saudação de boas vindas do usuário com a imagem ao lado
+            Padding(
+              padding: const EdgeInsets.only(top: 30),
+              child: Rows(
+                centro: false,
+                imagemTexto: false,
+                doisTextos: true,
+                textoPrincipal: "Bem vindo de volta",
+                tamanhoTextoPrincipal: 15,
+                corTextoPrincipal: kCorNomeDeMenosDestaque,
+                textoSecundario: "Fabricio Cintra",
+                tamanhoTextoSecundario: 25,
+                imageProvider: imageProvider,
+              ).rowTexto(),
+            ),
+            RolageListaAnimais(),
+            Rows(
               centro: false,
               imagemTexto: true,
               doisTextos: false,
@@ -64,11 +65,8 @@ class _HomePrincipalState extends State<HomePrincipal> {
               tamanhoTextoSecundario2: 20,
               corTextoSecundario2: kCorNomeDaTelaIncial,
             ).rowTexto(),
-          ),
-          MeninoSofa(),
-          Padding(
-            padding: const EdgeInsets.all(20),
-            child: Rows(
+            MeninoSofa(),
+            Rows(
               centro: true,
               imagemTexto: true,
               doisTextos: true,
@@ -80,9 +78,30 @@ class _HomePrincipalState extends State<HomePrincipal> {
               textoSecundario2: "Add novo",
               tamanhoTextoSecundario2: 20,
             ).rowTexto(),
-          ),
-          ConteudoContainer(),
-        ],
+            ConteudoContainer(),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Rows(
+                  centro: false,
+                  imagemTexto: true,
+                  doisTextos: false,
+                  textoPrincipal: "17:00h",
+                  tamanhoTextoPrincipal: 25,
+                ).rowTexto(),
+                for (int a = 0; a < 10; a++)
+                  Container(
+                    height: 3,
+                    width: 25,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(10),
+                      color: Colors.white30,
+                    ),
+                  ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
