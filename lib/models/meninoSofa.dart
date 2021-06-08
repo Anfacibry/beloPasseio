@@ -14,7 +14,6 @@ class MeninoSofa extends StatelessWidget {
         Column(
           children: [
             Container(
-              margin: EdgeInsets.only(right: 20, left: 20),
               height: 100,
               width: 400,
               decoration: BoxDecoration(
@@ -58,7 +57,6 @@ class MeninoSofa extends StatelessWidget {
               ),
             ),
             Container(
-              margin: EdgeInsets.only(right: 20, left: 20),
               height: 70,
               width: 400,
               decoration: BoxDecoration(
