@@ -1,5 +1,6 @@
 import 'package:belopasseio/models/mediaQuery.dart';
 import 'package:belopasseio/models/caixaTexto.dart';
+import 'package:belopasseio/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:belopasseio/constantes.dart';
 
@@ -62,7 +63,13 @@ class Login extends StatelessWidget {
                   width: largura * 0.6,
                   height: (largura * 0.8) - (largura * 0.65),
                   child: ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (_) {
+                          return HomePrincipal();
+                        }),
+                      );
+                    },
                     child: Text(
                       "ENTRAR",
                       style: TextStyle(
