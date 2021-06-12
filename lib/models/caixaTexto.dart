@@ -5,6 +5,8 @@ class CaixaTexto extends StatelessWidget {
   final Color? corCaixa;
   final String? nome;
   final bool aparecerOuNao;
+  final TextSelectionControls? nomeRecebido, senhaRecebido;
+
   CaixaTexto({
     @required this.largura,
     @required this.altura,
@@ -12,6 +14,8 @@ class CaixaTexto extends StatelessWidget {
     @required this.nome,
     @required this.tamanhoFonte,
     this.aparecerOuNao = false,
+    this.nomeRecebido,
+    this.senhaRecebido,
   });
   @override
   Widget build(BuildContext context) {
@@ -41,6 +45,8 @@ class CaixaTexto extends StatelessWidget {
             ),
             obscuringCharacter: "*",
             obscureText: aparecerOuNao,
+            selectionControls:
+                aparecerOuNao == true ? nomeRecebido : senhaRecebido,
           ),
         ),
       ),

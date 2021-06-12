@@ -1,6 +1,6 @@
 import 'package:belopasseio/models/mediaQuery.dart';
 import 'package:belopasseio/models/caixaTexto.dart';
-import 'package:belopasseio/pages/home.dart';
+import 'package:belopasseio/routes/rotas.dart';
 import 'package:flutter/material.dart';
 import 'package:belopasseio/constantes.dart';
 
@@ -64,11 +64,7 @@ class Login extends StatelessWidget {
                   height: (largura * 0.8) - (largura * 0.65),
                   child: ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(builder: (_) {
-                          return HomePrincipal();
-                        }),
-                      );
+                      Navigator.pushNamed(context, AppRoutes.ROTA_HOME);
                     },
                     child: Text(
                       "ENTRAR",
@@ -92,6 +88,18 @@ class Login extends StatelessWidget {
                   height: altura * 0.01,
                 ),
                 //Botão de redefinir a senha
+                Padding(
+                  padding: const EdgeInsets.only(left: 40, right: 40),
+                  child: Text(
+                    "Senha incorreta, por favor virifique login e senha e digite novamente!",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: kCorNomeDeMenosDestaque,
+                      fontWeight: FontWeight.bold,
+                      fontSize: largura * 0.04,
+                    ),
+                  ),
+                ),
                 Text(
                   "Esqueci a senha",
                   style: TextStyle(

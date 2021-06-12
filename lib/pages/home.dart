@@ -37,7 +37,7 @@ class _HomePrincipalState extends State<HomePrincipal> {
                 imageProvider: imageProvider,
               ).rowTexto(),
             ),
-            RolageListaAnimais(),
+            const RolageListaAnimais(),
             Rows(
               centro: false,
               imagemTexto: true,
