@@ -21,14 +21,15 @@ const String FontSignikaNegativeSemiBold =
 
 //imagens
 const String SLOGAN = "assets/images/sloga.png";
-const String CAT1 = "assets/images/cat1.png";
-const String DOG1 = "assets/images/dog1.png";
-const String DOG2 = "assets/images/dog2.png";
+const String CAT1 = "assets/images/cat1CFundo.png";
+const String DOG1 = "assets/images/dog1CFundo.png";
+const String DOG2 = "assets/images/dog2CFundo.png";
 const String FUNDO = "assets/images/fundo.jpg";
 const String MENINOSOFA = "assets/images/menino1.png";
 const String MENINO2 = "assets/images/menino2.png";
 const String PERFIL1 = "assets/images/perfil1.png";
 const String PERFIL2 = "assets/images/perfil2.png";
+const String MENINOSOFA2 = "assets/images/meninofundo.png";
 
 //icones
 const String BALANCA = "assets/icons/balanca.png";
