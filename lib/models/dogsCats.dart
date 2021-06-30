@@ -5,12 +5,11 @@ class DogsCats extends StatelessWidget {
       larguraPrincipal,
       alturaSecundaria,
       larguraSecundaria;
-  final String imagemFundo, imagemAnimal;
+  final String imagemAnimal;
   final String statusAnimal, nomeAnimal;
   final Color? corBotao;
 
   DogsCats(
-    this.imagemFundo,
     this.imagemAnimal,
     this.statusAnimal,
     this.nomeAnimal, {
@@ -35,18 +34,9 @@ class DogsCats extends StatelessWidget {
           Container(
             height: alturaSecundaria,
             width: larguraSecundaria,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage(
-                  imagemFundo,
-                ),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Stack(
-              children: [
-                Center(child: Image.asset(imagemAnimal)),
-              ],
+            child: Image.asset(
+              imagemAnimal,
+              fit: BoxFit.cover,
             ),
           ),
           Padding(
