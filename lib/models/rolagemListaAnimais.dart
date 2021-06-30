@@ -17,7 +17,6 @@ class RolageListaAnimais extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.all(8.0),
               child: DogsCats(
-                FUNDO,
                 e["imagem"]!,
                 e["status"]!,
                 e["nome"]!,
