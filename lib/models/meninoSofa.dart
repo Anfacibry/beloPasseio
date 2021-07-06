@@ -25,7 +25,7 @@ class MeninoSofa extends StatelessWidget {
               Positioned(
                 top: -22,
                 child: Container(
-                  width: 392,
+                  width: 400,
                   child: Image.asset(
                     MENINOSOFA2,
                     fit: BoxFit.cover,
