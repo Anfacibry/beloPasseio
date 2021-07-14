@@ -10,9 +10,11 @@ class Login extends StatelessWidget {
     double altura = AlturaLargura().alturaPega(context);
     double largura = AlturaLargura().larguraPega(context);
     return Scaffold(
-      body: Center(
-        child: Container(
-          padding: EdgeInsets.only(top: altura * 0.04, bottom: altura * 0.01),
+      body: Container(
+        height: altura,
+        width: largura,
+        padding: EdgeInsets.only(top: largura * 0.01, bottom: altura * 0.01),
+        child: Center(
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -21,7 +23,7 @@ class Login extends StatelessWidget {
                   SLOGAN,
                 ),
                 SizedBox(
-                  height: altura * 0.04,
+                  height: largura * 0.02,
                 ),
                 Text(
                   "Dogs & Cats",
@@ -32,7 +34,7 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: altura * 0.04,
+                  height: largura * 0.02,
                 ),
                 //Caixa de Texto de login
                 CaixaTexto(
@@ -44,7 +46,7 @@ class Login extends StatelessWidget {
                   aparecerOuNao: false,
                 ),
                 SizedBox(
-                  height: altura * 0.02,
+                  height: largura * 0.02,
                 ),
                 //Caixa de Texto de senha
                 CaixaTexto(
@@ -56,7 +58,7 @@ class Login extends StatelessWidget {
                   aparecerOuNao: true,
                 ),
                 SizedBox(
-                  height: altura * 0.02,
+                  height: largura * 0.02,
                 ),
                 //Container com apresentação do botão para entrar com login e senha
                 Container(
@@ -85,7 +87,7 @@ class Login extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  height: altura * 0.01,
+                  height: largura * 0.01,
                 ),
                 //Botão de redefinir a senha
                 Padding(
