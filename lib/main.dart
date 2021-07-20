@@ -1,6 +1,7 @@
 import 'package:belopasseio/constantes.dart';
 import 'package:belopasseio/pages/home.dart';
 import 'package:belopasseio/pages/login.dart';
+import 'package:belopasseio/pages/page_detalhe_passeio.dart';
 import 'package:belopasseio/routes/rotas.dart';
 import 'package:flutter/material.dart';
 
@@ -20,6 +21,7 @@ class MyApp extends StatelessWidget {
         routes: {
           AppRoutes.ROTA_PRINCIPAL: (context) => Login(),
           AppRoutes.ROTA_HOME: (context) => HomePrincipal(),
+          AppRoutes.ROTA_PASSEIO: (context) => PageDetalhePasseio(),
         });
   }
 }
