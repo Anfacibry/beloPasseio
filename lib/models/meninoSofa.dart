@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import '../constantes.dart';
 
 class MeninoSofa extends StatelessWidget {
-  const MeninoSofa({Key? key}) : super(key: key);
+  final void Function()? fun;
+  const MeninoSofa({@required this.fun, Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +61,7 @@ class MeninoSofa extends StatelessWidget {
                 ),
               ),
               ElevatedButton(
-                onPressed: () {},
+                onPressed: fun,
                 child: Text(
                   "Rota",
                   style: TextStyle(
