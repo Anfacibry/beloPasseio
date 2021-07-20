@@ -3,6 +3,7 @@ import 'package:belopasseio/models/mediaQuery.dart';
 import 'package:belopasseio/models/meninoSofa.dart';
 import 'package:belopasseio/models/rolagemListaAnimais.dart';
 import 'package:belopasseio/models/rows.dart';
+import 'package:belopasseio/routes/rotas.dart';
 import 'package:flutter/material.dart';
 
 import '../constantes.dart';
@@ -19,6 +20,10 @@ class _HomePrincipalState extends State<HomePrincipal> {
   Widget build(BuildContext context) {
     double auturaPega = AlturaLargura().alturaPega(context);
     double larguraPega = AlturaLargura().larguraPega(context);
+    void fun() {
+      Navigator.pushNamed(context, AppRoutes.ROTA_PASSEIO);
+    }
+
     return Scaffold(
       body: Container(
         height: auturaPega,
@@ -54,7 +59,9 @@ class _HomePrincipalState extends State<HomePrincipal> {
                 tamanhoTextoSecundario2: 20,
                 corTextoSecundario2: kCorNomeDaTelaIncial,
               ).rowTexto(),
-              MeninoSofa(),
+              MeninoSofa(
+                fun: fun,
+              ),
               Rows(
                 centro: true,
                 imagemTexto: true,
