@@ -42,7 +42,7 @@ class Login extends StatelessWidget {
                   altura: (largura * 0.8) - (largura * 0.65),
                   corCaixa: kCorDaCaixa,
                   nome: "Nome",
-                  tamanhoFonte: largura * 0.09,
+                  tamanhoFonte: largura * 0.06,
                   aparecerOuNao: false,
                 ),
                 SizedBox(
@@ -54,7 +54,7 @@ class Login extends StatelessWidget {
                   altura: (largura * 0.8) - (largura * 0.65),
                   corCaixa: kCorDaCaixa,
                   nome: "Senha",
-                  tamanhoFonte: largura * 0.09,
+                  tamanhoFonte: largura * 0.06,
                   aparecerOuNao: true,
                 ),
                 SizedBox(
@@ -88,19 +88,6 @@ class Login extends StatelessWidget {
                 ),
                 SizedBox(
                   height: largura * 0.01,
-                ),
-                //Botão de redefinir a senha
-                Padding(
-                  padding: const EdgeInsets.only(left: 40, right: 40),
-                  child: Text(
-                    "Senha incorreta, por favor virifique login e senha e digite novamente!",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: kCorNomeDeMenosDestaque,
-                      fontWeight: FontWeight.bold,
-                      fontSize: largura * 0.04,
-                    ),
-                  ),
                 ),
                 Text(
                   "Esqueci a senha",
