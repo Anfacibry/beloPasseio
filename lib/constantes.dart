@@ -30,6 +30,7 @@ const String MENINO2 = "assets/images/menino2.png";
 const String PERFIL1 = "assets/images/perfil1.png";
 const String PERFIL2 = "assets/images/perfil2.png";
 const String MENINOSOFA2 = "assets/images/meninofundo.png";
+const String SLOGAN_COM_FUNDO = "assets/images/SlogaComFundo.png";
 
 //icones
 const String BALANCA = "assets/icons/balanca.png";
