@@ -53,7 +53,7 @@ class DogsCats extends StatelessWidget {
                 Text(
                   nomeAnimal,
                   style: TextStyle(
-                    fontSize: 25,
+                    fontSize: 21,
                     fontWeight: FontWeight.bold,
                   ),
                 ),

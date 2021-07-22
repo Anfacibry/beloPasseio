@@ -58,6 +58,7 @@ class ConteudoContainer extends StatelessWidget {
                         corTextoPrincipal: Colors.black,
                         corTextoSecundario: kCorNomeDeMenosDestaque,
                         tamanhoTextoSecundario: 15,
+                        icone: Container(),
                       ),
                     ),
                   ],
@@ -73,6 +74,7 @@ class ConteudoContainer extends StatelessWidget {
                   corTextoPrincipal: Colors.black,
                   corTextoSecundario: kCorNomeDeMenosDestaque,
                   tamanhoTextoSecundario: 15,
+                  icone: Container(),
                 ),
               )
             ],

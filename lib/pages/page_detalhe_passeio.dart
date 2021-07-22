@@ -1,4 +1,6 @@
 import 'package:belopasseio/constantes.dart';
+import 'package:belopasseio/models/botaoFoto.dart';
+import 'package:belopasseio/models/colunaTextos.dart';
 import 'package:belopasseio/models/mediaQuery.dart';
 import 'package:belopasseio/routes/rotas.dart';
 import 'package:flutter/material.dart';
@@ -33,27 +35,9 @@ class PageDetalhePasseio extends StatelessWidget {
                           },
                         ),
                       ),
-                      Container(
-                        height: largura * 0.1,
-                        width: largura * 0.4,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(10),
-                          color: kCorBotao.withOpacity(0.9),
-                        ),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          children: [
-                            Image.asset(CAMERA),
-                            Text(
-                              "Video ao vivo",
-                              style: TextStyle(
-                                fontSize: 17,
-                                color: kCorDaCaixa,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ],
-                        ),
+                      BotaoFoto(
+                        largura: largura,
+                        alturaMultiplicada: 0.1,
                       ),
                     ],
                   ),
@@ -71,15 +55,111 @@ class PageDetalhePasseio extends StatelessWidget {
                           ),
                           color: kCorDaCaixa,
                         ),
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                right: 20,
+                                top: 10,
+                                left: 20,
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  ColunaTextos(
+                                    centro: true,
+                                    textoPrincipal: "Bob",
+                                    textoSecundario: "2 anos de idade",
+                                    tamanhoTextoPrincipal: 24,
+                                    corTextoPrincipal: Colors.black,
+                                    corTextoSecundario: Colors.black38,
+                                    tamanhoTextoSecundario: 20,
+                                    icone: Container(),
+                                  ),
+                                  BotaoFoto(
+                                    largura: largura,
+                                    alturaMultiplicada: 0.13,
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding: EdgeInsets.only(
+                                right: 20,
+                                top: 10,
+                                left: 20,
+                              ),
+                              child: Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceAround,
+                                children: [
+                                  ColunaTextos(
+                                    centro: true,
+                                    textoPrincipal: "Sexo",
+                                    textoSecundario: "Masculino",
+                                    tamanhoTextoPrincipal: 15,
+                                    corTextoPrincipal: Colors.black45,
+                                    corTextoSecundario: Colors.black,
+                                    tamanhoTextoSecundario: 20,
+                                    icone: IconButton(
+                                      icon: Image.asset(SEXO),
+                                      onPressed: () {},
+                                    ),
+                                  ),
+                                  ColunaTextos(
+                                    centro: true,
+                                    textoPrincipal: "Cor",
+                                    textoSecundario: "Azul",
+                                    tamanhoTextoPrincipal: 15,
+                                    corTextoPrincipal: Colors.black45,
+                                    corTextoSecundario: Colors.black,
+                                    tamanhoTextoSecundario: 20,
+                                    icone: IconButton(
+                                      icon: Image.asset(PINTURA),
+                                      onPressed: () {},
+                                    ),
+                                  ),
+                                  ColunaTextos(
+                                    centro: true,
+                                    textoPrincipal: "Recorde",
+                                    textoSecundario: "105",
+                                    tamanhoTextoPrincipal: 15,
+                                    corTextoPrincipal: Colors.black45,
+                                    corTextoSecundario: Colors.black,
+                                    tamanhoTextoSecundario: 20,
+                                    icone: IconButton(
+                                      icon: Image.asset(MEDALHA),
+                                      onPressed: () {},
+                                    ),
+                                  ),
+                                  ColunaTextos(
+                                    centro: true,
+                                    textoPrincipal: "Peso",
+                                    textoSecundario: "8kg",
+                                    tamanhoTextoPrincipal: 15,
+                                    corTextoPrincipal: Colors.black45,
+                                    corTextoSecundario: Colors.black,
+                                    tamanhoTextoSecundario: 20,
+                                    icone: IconButton(
+                                      icon: Image.asset(BALANCA),
+                                      onPressed: () {},
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                       Positioned(
-                        top: altura * 0.2,
+                        top: altura * 0.22,
                         child: Container(
                           height: altura * 0.4,
                           width: largura,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.only(
-                              topLeft: Radius.circular(40),
+                              topLeft: Radius.circular(60),
                             ),
                             color: kCorAzulForte,
                           ),
