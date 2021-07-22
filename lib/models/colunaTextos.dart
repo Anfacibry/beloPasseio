@@ -7,15 +7,17 @@ class ColunaTextos extends StatelessWidget {
   final String? textoPrincipal, textoSecundario;
   final double? tamanhoTextoPrincipal, tamanhoTextoSecundario;
   final Color? corTextoPrincipal, corTextoSecundario;
+  final Widget? icone;
   const ColunaTextos({
     Key? key,
-    @required this.centro,
-    @required this.textoPrincipal,
-    @required this.textoSecundario,
-    @required this.tamanhoTextoPrincipal,
-    @required this.corTextoPrincipal,
-    @required this.corTextoSecundario,
-    @required this.tamanhoTextoSecundario,
+    required this.centro,
+    required this.textoPrincipal,
+    required this.textoSecundario,
+    required this.tamanhoTextoPrincipal,
+    required this.corTextoPrincipal,
+    required this.corTextoSecundario,
+    required this.tamanhoTextoSecundario,
+    required this.icone,
   }) : super(key: key);
 
   @override
@@ -25,6 +27,7 @@ class ColunaTextos extends StatelessWidget {
           ? CrossAxisAlignment.start
           : CrossAxisAlignment.center,
       children: [
+        icone!,
         Text(
           textoPrincipal!,
           style: EstiloTextos().estiloTextoPrincipal(
