@@ -21,6 +21,7 @@ class Login extends StatelessWidget {
               children: [
                 Image.asset(
                   SLOGAN,
+                  height: altura * 0.4,
                 ),
                 SizedBox(
                   height: largura * 0.02,
@@ -30,7 +31,7 @@ class Login extends StatelessWidget {
                   style: TextStyle(
                     color: kCorNomeDaTelaIncial,
                     fontWeight: FontWeight.bold,
-                    fontSize: largura * 0.12,
+                    fontSize: altura * 0.06,
                   ),
                 ),
                 SizedBox(
@@ -39,7 +40,7 @@ class Login extends StatelessWidget {
                 //Caixa de Texto de login
                 CaixaTexto(
                   largura: largura * 0.8,
-                  altura: (largura * 0.8) - (largura * 0.65),
+                  altura: (largura * 0.8) - (largura * 0.68),
                   corCaixa: kCorDaCaixa,
                   nome: "Nome",
                   tamanhoFonte: largura * 0.06,
@@ -51,7 +52,7 @@ class Login extends StatelessWidget {
                 //Caixa de Texto de senha
                 CaixaTexto(
                   largura: largura * 0.8,
-                  altura: (largura * 0.8) - (largura * 0.65),
+                  altura: (largura * 0.8) - (largura * 0.68),
                   corCaixa: kCorDaCaixa,
                   nome: "Senha",
                   tamanhoFonte: largura * 0.06,
@@ -63,7 +64,7 @@ class Login extends StatelessWidget {
                 //Container com apresentação do botão para entrar com login e senha
                 Container(
                   width: largura * 0.6,
-                  height: (largura * 0.8) - (largura * 0.65),
+                  height: (largura * 0.8) - (largura * 0.68),
                   child: ElevatedButton(
                     onPressed: () {
                       Navigator.pushNamed(context, AppRoutes.ROTA_HOME);
@@ -73,7 +74,7 @@ class Login extends StatelessWidget {
                       style: TextStyle(
                         color: kCorNomeDaTelaIncial,
                         fontWeight: FontWeight.bold,
-                        fontSize: largura * 0.08,
+                        fontSize: largura * 0.07,
                       ),
                     ),
                     style: ButtonStyle(
@@ -94,7 +95,7 @@ class Login extends StatelessWidget {
                   style: TextStyle(
                     color: kCorNomeDeMenosDestaque,
                     fontWeight: FontWeight.bold,
-                    fontSize: largura * 0.06,
+                    fontSize: largura * 0.05,
                   ),
                 ),
               ],
