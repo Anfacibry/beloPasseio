@@ -24,7 +24,7 @@ class BotaoFoto extends StatelessWidget {
           color: kCorBotao.withOpacity(0.9),
         ),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             Image.asset(CAMERA),
             Text(
